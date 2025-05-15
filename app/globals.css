@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@theme {
+  --color-text: #07060e;
+  --color-bg: #f4f4f7;
+  --color-primary: #352961;
+  --color-secondary: #774181;
+  --color-accent: #e6b2c6;
+  --text-primary: #07060e;
+  --text-muted: rgba(7, 6, 14, 0.8);
+  --background-light: #f4f4f7;
+  --background-accent: #e6b2c6;
+  --accent-light: rgba(230, 178, 198, 0.2);
+  --accent-dark: #774181;
+  --primary: #352961;
+  --secondary: #774181;
+}
+
+#partner-app span.swiper-pagination-bullet {
+  background: #6B7280;
+
+}
+
+#user-app span.swiper-pagination-bullet {
+  background-color: aliceblue;
+}
+
+.swiper-slide {
+  margin-bottom: 20px;
+}
+
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
