@@ -1,0 +1,154 @@
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  padding: var(--space-xxl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before,
+.cta::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+}
+
+.email-subscription {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+}
+
+.email-subscription h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.email-form {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.email-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 1rem;
+  transition: all var(--transition-medium);
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--white);
+  color: var(--primary);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+}
+
+.submit-btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.cta::before {
+  top: -100px;
+  left: -100px;
+}
+
+.cta::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--white);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-lg);
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.cta .btn-primary {
+  background-color: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
+}
+
+.cta .btn-primary:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.cta .btn-secondary {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.cta .btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
